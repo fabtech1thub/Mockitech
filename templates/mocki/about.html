@@ -1,0 +1,123 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+
+{% block title %}About MockiTech - Your Trusted IT Partner in Kenya{% endblock %}
+
+{% block content %}
+<!-- About Hero Section -->
+<section class="about-hero bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">About MockiTech - Providing IT Solutions in Kenya</h1>
+                <p class="lead">We are a leading IT solutions provider in Kenya, committed to delivering innovative software solutions that drive business growth across the region.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/about-hero.svg' %}" alt="About MockiTech - IT Company Kenya" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story Section -->
+<section class="our-story py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Our Story - Growing with Kenyan Businesses</h2>
+                <p class="lead">Founded with a vision to transform businesses through technology, MockiTech has grown to become a trusted IT partner for organizations across Kenya.</p>
+                <p>We combine technical expertise with industry best practices to deliver IT solutions that not only meet but exceed our Kenyan clients' expectations. Our commitment to quality, innovation, and customer satisfaction has made us a preferred choice for businesses seeking reliable IT solutions in Kenya.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Mission Section -->
+<section class="our-mission bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-bullseye fa-3x text-primary mb-3"></i>
+                    <h3>Our Mission in Kenya</h3>
+                    <p>To empower Kenyan businesses with innovative technology solutions that drive growth and success in the local market.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-eye fa-3x text-primary mb-3"></i>
+                    <h3>Our Vision for IT in Kenya</h3>
+                    <p>To be the leading provider of cutting-edge IT solutions that transform businesses across Kenya.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                    <h3>Our Values</h3>
+                    <p>Innovation, Quality, Integrity, and Customer Satisfaction drive everything we do in serving our Kenyan clients.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Leadership Team - Serving Kenya</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="{% static 'images/team-1.jpg' %}" class="card-img-top" alt="Team Member MockiTech Kenya">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Micheni Mich</h4>
+                        <p class="card-text text-muted">CEO & Founder</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="{% static 'images/team-2.jpg' %}" class="card-img-top" alt="Team Member MockiTech Kenya">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Kivungi Muthanga</h4>
+                        <p class="card-text text-muted">CTO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="{% static 'images/team-3.jpg' %}" class="card-img-top" alt="Team Member MockiTech Kenya">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Erick Munene</h4>
+                        <p class="card-text text-muted">Head of Development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats bg-primary text-white py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <h2 class="display-4 fw-bold">500+</h2>
+                <p>Happy Clients in Kenya</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="display-4 fw-bold">1000+</h2>
+                <p>Projects Completed in Kenya</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="display-4 fw-bold">50+</h2>
+                <p>Team Members</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="display-4 fw-bold">10+</h2>
+                <p>Years Experience in Kenya</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

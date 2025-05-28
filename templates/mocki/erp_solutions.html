@@ -1,0 +1,252 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+
+{% block title %}ERP Solutions - MockiTech{% endblock %}
+
+{% block meta_description %}Comprehensive ERP solutions for businesses. Streamline your operations with our integrated enterprise resource planning system.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="erp-hero bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">ERP Solutions</h1>
+                <p class="lead">Streamline your business operations with our comprehensive ERP system</p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#features" class="btn btn-primary btn-lg">View Features</a>
+                    <a href="{% url 'mocki:contact' %}" class="btn btn-outline-primary btn-lg">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/erp-hero.jpg' %}" alt="ERP Solutions" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Key Features</h2>
+        <div class="row g-4">
+            <!-- Financial Management -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h3>Financial Management</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Accounting & Bookkeeping</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Budget Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Financial Reporting</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Tax Management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Inventory Management -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-boxes fa-3x text-primary mb-3"></i>
+                    <h3>Inventory Management</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Stock Tracking</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Order Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Supplier Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Warehouse Management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Human Resources -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <h3>Human Resources</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Employee Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Payroll Processing</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Attendance Tracking</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Performance Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Features -->
+<section class="additional-features bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Additional Features</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-chart-pie fa-3x text-primary mb-3"></i>
+                    <h4>Business Intelligence</h4>
+                    <p>Advanced analytics and reporting tools</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-project-diagram fa-3x text-primary mb-3"></i>
+                    <h4>Project Management</h4>
+                    <p>Track and manage projects effectively</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
+                    <h4>Process Automation</h4>
+                    <p>Automate routine business processes</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <h4>Mobile Access</h4>
+                    <p>Access your ERP system anywhere</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+        <div class="row g-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Basic</h3>
+                        <div class="price">
+                            <span class="h2">$299</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Up to 5 Users</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Modules</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Email Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Reports</li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card featured">
+                    <div class="card-body">
+                        <h3 class="card-title">Professional</h3>
+                        <div class="price">
+                            <span class="h2">$599</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Up to 20 Users</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>All Modules</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>24/7 Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Advanced Reports</li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Enterprise</h3>
+                        <div class="price">
+                            <span class="h2">Custom</span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Unlimited Users</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Custom Modules</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Dedicated Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Custom Integration</li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Transform Your Business?</h2>
+        <p class="lead mb-4">Contact us today to discuss your ERP needs</p>
+        <a href="{% url 'mocki:contact' %}" class="btn btn-light btn-lg">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .erp-hero {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .feature-card {
+        padding: 2rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-item {
+        padding: 2rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing-card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing-card.featured {
+        border: 2px solid var(--primary-color);
+        transform: scale(1.05);
+    }
+
+    .pricing-card .price {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    .pricing-card .price .h2 {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .pricing-card ul li {
+        margin-bottom: 1rem;
+    }
+</style>
+{% endblock %} 

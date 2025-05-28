@@ -1,0 +1,252 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+
+{% block title %}School Management Systems - MockiTech{% endblock %}
+
+{% block meta_description %}Comprehensive school management solution for educational institutions. Streamline student information, attendance, grades, and parent communication with our advanced school management system.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="school-hero bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">School Management System</h1>
+                <p class="lead">Transform your educational institution with our comprehensive management solution</p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#pricing" class="btn btn-primary btn-lg">View Pricing</a>
+                    <a href="{% url 'mocki:contact' %}" class="btn btn-outline-primary btn-lg">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/240_F_163789013_wP22oviyGLjHJj5iOW3beaQiRNq2l7SY.jpg' %}" alt="School Management System" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section class="school-features py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Key Features</h2>
+        <div class="row g-4">
+            <!-- Student Management -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-user-graduate fa-3x text-primary mb-3"></i>
+                    <h3>Student Management</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Student Registration</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Academic Records</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Attendance Tracking</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Student Portal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Academic Management -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-book fa-3x text-primary mb-3"></i>
+                    <h3>Academic Management</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Grade Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Course Scheduling</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Exam Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Report Generation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Parent Portal -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <h3>Parent Portal</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Progress Monitoring</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Fee Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Communication Tools</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Event Calendar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Features -->
+<section class="additional-features bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Additional Features</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                    <h4>Teacher Management</h4>
+                    <p>Streamline teacher schedules and resources</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h4>Analytics & Reporting</h4>
+                    <p>Comprehensive academic analytics</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-money-bill-wave fa-3x text-primary mb-3"></i>
+                    <h4>Fee Management</h4>
+                    <p>Automated fee collection and tracking</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                    <h4>Security & Access</h4>
+                    <p>Role-based access control</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+        <div class="row g-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Basic</h3>
+                        <div class="price">
+                            <span class="h2">$199</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Up to 500 Students</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Student Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Grade Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Email Support</li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card featured">
+                    <div class="card-body">
+                        <h3 class="card-title">Professional</h3>
+                        <div class="price">
+                            <span class="h2">$399</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Up to 2000 Students</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Advanced Student Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Full Parent Portal</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>24/7 Support</li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Enterprise</h3>
+                        <div class="price">
+                            <span class="h2">$799</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Unlimited Students</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Multi-campus Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Custom Integration</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Dedicated Support</li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Transform Your School?</h2>
+        <p class="lead mb-4">Contact us today to discuss your school management needs</p>
+        <a href="{% url 'mocki:contact' %}" class="btn btn-light btn-lg">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .school-hero {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .feature-card {
+        padding: 2rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-item {
+        padding: 2rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing-card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing-card.featured {
+        border: 2px solid var(--primary-color);
+        transform: scale(1.05);
+    }
+
+    .pricing-card .price {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    .pricing-card .price .h2 {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .pricing-card ul li {
+        margin-bottom: 1rem;
+    }
+</style>
+{% endblock %} 

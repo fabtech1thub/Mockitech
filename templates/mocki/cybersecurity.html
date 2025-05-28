@@ -1,0 +1,106 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+
+{% block title %}Cybersecurity Solutions - MockiTech{% endblock %}
+
+{% block meta_description %}Comprehensive cybersecurity solutions for businesses. Protect your data and systems with our advanced security services and solutions.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="cyber-hero bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">Cybersecurity Solutions</h1>
+                <p class="lead">Protect your business with enterprise-grade security solutions</p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
+                    <a href="{% url 'mocki:contact' %}" class="btn btn-outline-primary btn-lg">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/cybersecurity-hero.jpg' %}" alt="Cybersecurity" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Cybersecurity Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Network Security</h3>
+                        <p>Comprehensive protection for your network infrastructure</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Firewall Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Intrusion Detection</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>VPN Solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Data Protection</h3>
+                        <p>Secure your sensitive business data</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Encryption Services</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Access Control</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Data Loss Prevention</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-user-shield fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Security Monitoring</h3>
+                        <p>24/7 monitoring and threat detection</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Real-time Monitoring</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Threat Intelligence</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Incident Response</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Secure Your Business?</h2>
+        <p class="lead mb-4">Contact us today for a free security assessment</p>
+        <a href="{% url 'mocki:contact' %}" class="btn btn-light btn-lg">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .cyber-hero {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+</style>
+{% endblock %} 

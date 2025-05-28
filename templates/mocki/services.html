@@ -1,0 +1,165 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+{% load mocki_extras %}
+
+{% block title %}Our Services - MockiTech{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="page-header bg-light py-5">
+    <div class="container">
+        <h1 class="display-4 mb-3">Our Services</h1>
+        <p class="lead">Comprehensive IT solutions tailored for your business needs</p>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Software Solutions -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Software Solutions</h3>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                POS Systems
+                                <span class="float-end">{{ 150000|format_price }}</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                ERP
+                                <span class="float-end">{{ 180000|format_price }}</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Hospital Management
+                                <span class="float-end">{{ 250000|format_price }}</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                School Management
+                                <span class="float-end">{{ 200000|format_price }}</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Web Design
+                                <span class="float-end">{{ 120000|format_price }}</span>
+                            </li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hardware Solutions -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Hardware Solutions</h3>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Hardware Sourcing
+                                <span class="float-end">{{ 50000|format_price }}</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Hardware Installation
+                                <span class="float-end">{{ 30000|format_price }}</span>
+                            </li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Support -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Technical Support</h3>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Technical Support
+                                <span class="float-end">{{ 25000|format_price }}/month</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                IT Support
+                                <span class="float-end">{{ 35000|format_price }}/month</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Maintenance Services
+                                <span class="float-end">{{ 20000|format_price }}/month</span>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                CCTV & Security
+                                <span class="float-end">{{ 45000|format_price }}/month</span>
+                            </li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">Need a Custom Solution?</h2>
+                <p class="lead mb-4">Contact us for a personalized quote tailored to your specific business needs.</p>
+                <a href="{% url 'mocki:contact' %}" class="btn btn-primary btn-lg">Get a Custom Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .card {
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .list-unstyled li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .list-unstyled li:last-child {
+        border-bottom: none;
+    }
+</style>
+{% endblock %} 

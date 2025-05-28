@@ -1,0 +1,228 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+
+{% block title %}{{ service.name }} - MockiTech{% endblock %}
+
+{% block meta_description %}{{ service.short_description }}{% endblock %}
+
+{% block content %}
+<!-- Service Hero Section -->
+<section class="service-hero bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">{{ service.name }}</h1>
+                <p class="lead">{{ service.short_description }}</p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#pricing" class="btn btn-primary btn-lg">View Pricing</a>
+                    <a href="{% url 'mocki:contact' %}" class="btn btn-outline-primary btn-lg">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                {% if service.image %}
+                    <img src="{{ service.image.url }}" alt="{{ service.name }}" class="img-fluid rounded shadow">
+                {% else %}
+                    <div class="service-icon-large text-center">
+                        <i class="fas {{ service.icon }} fa-5x text-primary"></i>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Details Section -->
+<section class="service-details py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Description -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="h3 mb-4">Overview</h2>
+                        <div class="service-description">
+                            {{ service.full_description|linebreaks }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="h3 mb-4">Key Features</h2>
+                        <div class="row g-4">
+                            {% for feature in service.features %}
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-primary me-2"></i>
+                                    {{ feature }}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="h3 mb-4">Benefits</h2>
+                        <div class="row g-4">
+                            {% for benefit in service.benefits %}
+                            <div class="col-md-6">
+                                <div class="benefit-item">
+                                    <i class="fas fa-star text-primary me-2"></i>
+                                    {{ benefit }}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Requirements -->
+                {% if service.technical_requirements %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="h3 mb-4">Technical Requirements</h2>
+                        <div class="technical-requirements">
+                            {{ service.technical_requirements|linebreaks }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- FAQ -->
+                {% if service.faq %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="h3 mb-4">Frequently Asked Questions</h2>
+                        <div class="accordion" id="serviceFAQ">
+                            {% for faq in service.faq %}
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{ forloop.counter }}">
+                                        {{ faq.question }}
+                                    </button>
+                                </h3>
+                                <div id="faq{{ forloop.counter }}" class="accordion-collapse collapse" data-bs-parent="#serviceFAQ">
+                                    <div class="accordion-body">
+                                        {{ faq.answer }}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Pricing Card -->
+                <div class="card mb-4 sticky-top" style="top: 2rem;">
+                    <div class="card-body">
+                        <h2 class="h3 mb-4">Pricing</h2>
+                        {% if service.base_price %}
+                        <div class="price-display mb-4">
+                            <span class="h2 text-primary">${{ service.base_price }}</span>
+                            <span class="text-muted">starting from</span>
+                        </div>
+                        {% endif %}
+                        <div class="pricing-description mb-4">
+                            {{ service.pricing_description|linebreaks }}
+                        </div>
+                        {% if service.implementation_time %}
+                        <div class="implementation-time mb-4">
+                            <h4 class="h5">Implementation Time</h4>
+                            <p class="mb-0">{{ service.implementation_time }}</p>
+                        </div>
+                        {% endif %}
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get a Custom Quote</a>
+                    </div>
+                </div>
+
+                <!-- Related Services -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="h4 mb-4">Related Services</h3>
+                        <div class="related-services">
+                            {% for related_service in related_services %}
+                            <div class="related-service-item mb-3">
+                                <a href="{% url 'mocki:service_detail' related_service.slug %}" class="text-decoration-none">
+                                    <div class="d-flex align-items-center">
+                                        {% if related_service.icon %}
+                                        <i class="fas {{ related_service.icon }} text-primary me-3"></i>
+                                        {% endif %}
+                                        <div>
+                                            <h4 class="h6 mb-0">{{ related_service.name }}</h4>
+                                            <small class="text-muted">{{ related_service.short_description|truncatechars:60 }}</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Get Started with {{ service.name }}?</h2>
+        <p class="lead mb-4">Contact us today to discuss how we can help you achieve your goals</p>
+        <a href="{% url 'mocki:contact' %}" class="btn btn-light btn-lg">Contact Us Now</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .service-hero {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .service-icon-large {
+        padding: 3rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .feature-item, .benefit-item {
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .price-display {
+        text-align: center;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    .implementation-time {
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: rgba(13, 110, 253, 0.1);
+        color: #0d6efd;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(13, 110, 253, 0.1);
+    }
+</style>
+{% endblock %} 

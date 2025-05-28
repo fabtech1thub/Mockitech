@@ -1,0 +1,249 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+
+{% block title %}POS Systems - MockiTech{% endblock %}
+
+{% block meta_description %}Comprehensive POS systems for retail, restaurants, and hospitality businesses. Streamline your operations with our reliable and efficient point of sale solutions.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="pos-hero bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">Point of Sale Systems</h1>
+                <p class="lead">Streamline your business operations with our comprehensive POS solutions</p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#pricing" class="btn btn-primary btn-lg">View Pricing</a>
+                    <a href="{% url 'mocki:contact' %}" class="btn btn-outline-primary btn-lg">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/240_F_1121711693_hIPa1qzYVSFRnr8hrkr8sKAgKuvB9Pl3.jpg' %}" alt="POS System" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Types of POS Systems -->
+<section class="pos-types py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Types of POS Systems</h2>
+        <div class="row g-4">
+            <!-- Retail POS -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/240_F_918733505_HKWjphFD4lWCWAYZnEhd2lUvgbuZL4TZ.jpg' %}" class="card-img-top" alt="Retail POS">
+                    <div class="card-body">
+                        <h3 class="h4">Retail POS</h3>
+                        <p>Perfect for retail stores, boutiques, and general merchandise shops.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Inventory Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Barcode Scanning</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Customer Loyalty Program</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Sales Analytics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant POS -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/240_F_163789013_wP22oviyGLjHJj5iOW3beaQiRNq2l7SY.jpg' %}" class="card-img-top" alt="Restaurant POS">
+                    <div class="card-body">
+                        <h3 class="h4">Restaurant POS</h3>
+                        <p>Specialized for restaurants, cafes, and food service businesses.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Table Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Kitchen Display System</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Menu Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Split Bill Functionality</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hospitality POS -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/240_F_1009403450_bNsrylQdhzeqy57kLO8mOupqHvku59Os.jpg' %}" class="card-img-top" alt="Hospitality POS">
+                    <div class="card-body">
+                        <h3 class="h4">Hospitality POS</h3>
+                        <p>Ideal for hotels, resorts, and entertainment venues.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Room Service Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Event Booking</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Guest Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Multi-currency Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section class="pos-features bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Key Features</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-card text-center">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h4>Real-time Analytics</h4>
+                    <p>Track sales, inventory, and customer data in real-time</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card text-center">
+                    <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <h4>Mobile Integration</h4>
+                    <p>Access your POS system from any device</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card text-center">
+                    <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                    <h4>Cloud Backup</h4>
+                    <p>Secure data storage and automatic backups</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card text-center">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <h4>Security</h4>
+                    <p>Advanced security features and data protection</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pos-pricing py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+        <div class="row g-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Basic</h3>
+                        <div class="price">
+                            <span class="h2">KSh 12,900</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>1 Register</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Inventory</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Sales Reports</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Email Support</li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card featured">
+                    <div class="card-body">
+                        <h3 class="card-title">Professional</h3>
+                        <div class="price">
+                            <span class="h2">KSh 25,900</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>3 Registers</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Advanced Inventory</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Customer Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>24/7 Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Cybersecurity Solutions</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Data Management and Backup Solutions</li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Enterprise</h3>
+                        <div class="price">
+                            <span class="h2">KSh 51,900</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Unlimited Registers</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Multi-location Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Advanced Analytics</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Dedicated Support</li>
+                        </ul>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Transform Your Business?</h2>
+        <p class="lead mb-4">Contact us today to discuss your POS system requirements</p>
+        <a href="{% url 'mocki:contact' %}" class="btn btn-light btn-lg">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .pos-hero {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .feature-card {
+        padding: 2rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing-card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing-card.featured {
+        border: 2px solid var(--primary-color);
+        transform: scale(1.05);
+    }
+
+    .pricing-card .price {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    .pricing-card .price .h2 {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .pricing-card ul li {
+        margin-bottom: 1rem;
+    }
+</style>
+{% endblock %} 

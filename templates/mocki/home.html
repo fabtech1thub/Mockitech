@@ -1,0 +1,505 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+
+{% block title %}Leading IT Solutions & Software Development in Kenya - MockiTech{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero-section {
+        position: relative;
+        padding: 80px 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+
+    .background-slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .background-slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .background-slideshow img.active {
+        opacity: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .stats-section {
+        background: #f8f9fa;
+        padding: 4rem 0;
+    }
+
+    .stat-item {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #0d6efd;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .services-section {
+        padding: 5rem 0;
+        background: #f8f9fa;
+    }
+
+    .service-card {
+        border: none;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        height: 100%;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        padding: 2rem;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        background: #0d6efd;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+    }
+
+    .service-icon i {
+        font-size: 2rem;
+        color: white;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .service-description {
+        color: #666;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-link {
+        color: #0d6efd;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .service-link:hover {
+        color: #0a58ca;
+        transform: translateX(5px);
+    }
+
+    .cta-section {
+        background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+        padding: 5rem 0;
+        color: white;
+    }
+
+    .testimonial-section {
+        padding: 5rem 0;
+        background: #f8f9fa;
+    }
+
+    .testimonial-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        margin: 1rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-text {
+        font-style: italic;
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+        font-weight: 600;
+        color: #0d6efd;
+    }
+
+    .thumbnail-container {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .thumbnail-img {
+        width: 80px;
+        height: auto;
+        margin: 0 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="background-slideshow">
+        <img src="{% static 'images/240_F_163131613_n0ZXuSkxVBsLuHl19JV9we7Eq3C4gMnK.jpg' %}" alt="Background 1" class="active">
+        <img src="{% static 'images/240_F_671381883_FbdixsUWF3eECs3mavUBda23U8BtawxM.jpg' %}" alt="Background 2">
+        <img src="{% static 'images/240_F_1009403450_bNsrylQdhzeqy57kLO8mOupqHvku59Os.jpg' %}" alt="Background 3">
+        <img src="{% static 'images/240_F_918733505_HKWjphFD4lWCWAYZnEhd2lUvgbuZL4TZ.jpg' %}" alt="Background 4">
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1 class="hero-title">Manage your business any time, anywhere.</h1>
+                    <p class="hero-subtitle">Empowering businesses with innovative IT solutions and cutting-edge technology services.</p>
+                    <div class="d-flex gap-3">
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-light btn-lg">Talk to an expert</a>
+                        <a href="{% url 'mocki:services' %}" class="btn btn-outline-light btn-lg">View solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Years combined experience</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Customer support</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Projects completed</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Technological innovations</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-4">Our Services</h2>
+            <p class="lead">Comprehensive IT solutions tailored for your business needs</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <h3 class="service-title">Point of Sale (POS) Systems</h3>
+                    <p class="service-description">Streamline your sales process and manage inventory efficiently with our reliable POS systems. Perfect for retail, restaurants, and hospitality businesses.</p>
+                    <a href="{% url 'mocki:services' %}#pos-systems" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3 class="service-title">Hospital Management System</h3>
+                    <p class="service-description">Comprehensive healthcare management solutions for modern hospitals and clinics. Improve patient care and operational efficiency.</p>
+                    <a href="{% url 'mocki:services' %}#hospital-management" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3 class="service-title">School Management System</h3>
+                    <p class="service-description">Efficient and easy-to-use management system for educational institutions. Streamline administrative tasks and enhance communication.</p>
+                    <a href="{% url 'mocki:services' %}#school-management" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="service-title">ERP</h3>
+                    <p class="service-description">Build stronger customer relationships and drive sales growth with our powerful ERP solutions. Understand your customers better and personalize interactions.</p>
+                    <a href="{% url 'mocki:services' %}#crm-solutions" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Design</h3>
+                    <p class="service-description">Create stunning, responsive, and high-performing websites that capture your brand and engage your audience. Your online presence starts here.</p>
+                    <a href="{% url 'mocki:services' %}#web-design" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Software Development</h3>
+                    <p class="service-description">Custom software solutions tailored to your specific business needs. From concept to deployment, we build robust and scalable applications.</p>
+                    <a href="{% url 'mocki:services' %}#software-development" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="service-title">Hardware Sourcing</h3>
+                    <p class="service-description">Access to quality IT hardware and equipment from trusted suppliers. We help you find the right technology solutions for your business needs.</p>
+                    <a href="{% url 'mocki:hardware_sourcing' %}" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="service-title">Hardware Installation</h3>
+                    <p class="service-description">Professional installation services for all your IT infrastructure needs. Our certified technicians ensure proper setup and configuration.</p>
+                    <a href="{% url 'mocki:hardware_installation' %}" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="service-title">Technical Support</h3>
+                    <p class="service-description">24/7 technical assistance for all your IT challenges. Our expert team is always ready to help resolve your technical issues promptly.</p>
+                    <a href="{% url 'mocki:technical_support' %}" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="service-title">IT Support</h3>
+                    <p class="service-description">Comprehensive IT support services to keep your business running smoothly. From troubleshooting to system optimization, we've got you covered.</p>
+                    <a href="{% url 'mocki:it_support' %}" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3 class="service-title">Maintenance Services</h3>
+                    <p class="service-description">Regular maintenance and updates to ensure your IT systems operate at peak performance. Prevent issues before they impact your business.</p>
+                    <a href="{% url 'mocki:maintenance_services' %}" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="{% url 'mocki:services' %}" class="btn btn-primary btn-lg">View All Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2 class="display-4 mb-4">Ready to transform your business?</h2>
+        <p class="lead mb-4">Let's discuss how we can help you achieve your goals</p>
+        <a href="{% url 'mocki:contact' %}" class="btn btn-light btn-lg">Get Started</a>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonial-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-4">What Our Clients Say</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"MockiTech has transformed our business operations with their innovative IT solutions. Their team is professional and always available when we need them."</p>
+                    <p class="testimonial-author">- John Doe, CEO, Tech Solutions Ltd</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The cloud migration service provided by MockiTech was seamless and efficient. Our business has never been more productive."</p>
+                    <p class="testimonial-author">- Jane Smith, CTO, Digital Innovations</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Their 24/7 support and quick response time have been invaluable to our operations. Highly recommended!"</p>
+                    <p class="testimonial-author">- Mike Johnson, Operations Director</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Logos Section -->
+<section class="client-logos-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-4">Trusted By Industry Leaders</h2>
+            <p class="lead text-muted">We're proud to serve some of the most innovative companies in Kenya</p>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-6 col-md-2 mb-4">
+                <div class="client-logo">
+                    <img src="{% static 'images/clients/safaricom.png' %}" alt="Safaricom" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <div class="client-logo">
+                    <img src="{% static 'images/clients/equity.png' %}" alt="Equity Bank" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <div class="client-logo">
+                    <img src="{% static 'images/clients/kcb.png' %}" alt="KCB Bank" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <div class="client-logo">
+                    <img src="{% static 'images/clients/kenya-airways.png' %}" alt="Kenya Airways" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <div class="client-logo">
+                    <img src="{% static 'images/clients/nation-media.png' %}" alt="Nation Media" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <div class="client-logo">
+                    <img src="{% static 'images/clients/kenya-power.png' %}" alt="Kenya Power" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.background-slideshow img');
+    let currentIndex = 0;
+
+    function nextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    }
+
+    // Change image every 5 seconds
+    setInterval(nextImage, 5000);
+});
+</script>
+{% endblock %} 

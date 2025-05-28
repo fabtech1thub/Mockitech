@@ -1,0 +1,188 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+
+{% block title %}Contact MockiTech - Get in Touch for IT Solutions in Kenya{% endblock %}
+
+{% block content %}
+<!-- Contact Hero Section -->
+<section class="contact-hero bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">Contact MockiTech - Your Partner for IT Services in Kenya</h1>
+                <p class="lead">Get in touch with our expert team in Kenya to discuss your IT project requirements and find the right solutions for your business.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/contact-hero.svg' %}" alt="Contact IT Solutions Kenya" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-form py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">Send us a Message - IT Support & Inquiries Kenya</h2>
+                <form method="post" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                        <div class="invalid-feedback">
+                            Please enter your name.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="service" class="form-label">Service Interested In (e.g., POS System, Web Design Kenya)</label>
+                        <select class="form-select" id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="pos">POS Systems</option>
+                            <option value="erp">ERP Solutions</option>
+                            <option value="hospital">Hospital Management</option>
+                            <option value="school">School Management</option>
+                            <option value="web">Web Design</option>
+                            <option value="hardware">Hardware Solutions</option>
+                            <option value="support">Technical Support</option>
+                            <option value="other">Other IT Services</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a service.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message (Inquire about IT Solutions in Kenya)</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter your message.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message to MockiTech Kenya</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h2 class="mb-4">Contact Information - MockiTech Kenya</h2>
+                    <div class="info-item mb-4">
+                        <h4><i class="fas fa-map-marker-alt text-primary me-2"></i> Address in Kenya</h4>
+                        <p> Kindaruma Road<br>Nairobi<br>Kenya</p>
+                    </div>
+                    <div class="info-item mb-4">
+                        <h4><i class="fas fa-phone text-primary me-2"></i> Phone Numbers Kenya</h4>
+                        <p>+(254) 567-890 360<br>+(254) 718-862-447</p>
+                    </div>
+                    <div class="info-item mb-4">
+                        <h4><i class="fas fa-envelope text-primary me-2"></i> Email Addresses</h4>
+                        <p>info@mockitech.com<br>support@mockitech.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h4><i class="fas fa-clock text-primary me-2"></i> Business Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-4">Find Us in Kenya</h2>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986432970718!3d40.697149422113014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1645564750981!5m2!1sen!2s"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Frequently Asked Questions about IT Services in Kenya</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How long does it take to implement your IT solutions in Kenya?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Implementation time varies depending on the complexity of the project and your specific requirements. Typically, our solutions can be implemented for businesses in Kenya within 2-4 weeks.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you provide training and IT support in Kenya?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we provide comprehensive training and 24/7 technical support for all our solutions to clients across Kenya. Our support team is always ready to assist you.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Can your IT solutions be customized for businesses in Kenya?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! We understand that every business has unique needs. Our IT solutions are highly customizable to meet your specific requirements in the Kenyan market.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Form validation
+(function () {
+    'use strict'
+    var forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+        }, false)
+    })
+})()
+</script>
+{% endblock %} 

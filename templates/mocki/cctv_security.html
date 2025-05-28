@@ -1,0 +1,232 @@
+{% extends 'mocki/base.html' %}
+{% load static %}
+{% load mocki_extras %}
+
+{% block title %}CCTV & Security Solutions - MockiTech{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="page-header bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 mb-3">CCTV & Security Solutions</h1>
+                <p class="lead mb-4">Comprehensive security solutions to protect your business and assets with state-of-the-art surveillance technology.</p>
+                <a href="{% url 'mocki:contact' %}" class="btn btn-primary btn-lg">Get a Free Consultation</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/cctv-hero.jpg' %}" alt="CCTV & Security Solutions" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="h4 mb-3">CCTV Installation</h3>
+                        <p class="mb-4">Professional installation of high-quality CCTV systems with remote monitoring capabilities and mobile access.</p>
+                        <div class="pricing mb-4">
+                            <h4 class="h5 mb-3">Package Options:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Basic Package (4 cameras)
+                                    <span class="float-end">{{ 120000|format_price }}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Standard Package (8 cameras)
+                                    <span class="float-end">{{ 200000|format_price }}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Premium Package (12 cameras)
+                                    <span class="float-end">{{ 280000|format_price }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Access Control Systems</h3>
+                        <p class="mb-4">Secure your premises with advanced access control systems including biometric and card-based solutions.</p>
+                        <div class="pricing mb-4">
+                            <h4 class="h5 mb-3">Package Options:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Basic Access Control
+                                    <span class="float-end">{{ 80000|format_price }}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Biometric System
+                                    <span class="float-end">{{ 150000|format_price }}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Enterprise Solution
+                                    <span class="float-end">{{ 250000|format_price }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Alarm Systems</h3>
+                        <p class="mb-4">Integrated alarm systems with 24/7 monitoring and instant notifications for enhanced security.</p>
+                        <div class="pricing mb-4">
+                            <h4 class="h5 mb-3">Package Options:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Basic Alarm System
+                                    <span class="float-end">{{ 60000|format_price }}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Smart Alarm System
+                                    <span class="float-end">{{ 100000|format_price }}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Complete Security Suite
+                                    <span class="float-end">{{ 180000|format_price }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="{% url 'mocki:contact' %}" class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose Our Security Solutions?</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="d-flex align-items-start mb-4">
+                    <div class="feature-icon-small bg-primary bg-gradient text-white rounded-circle me-3">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="h5 mb-2">High-Quality Equipment</h4>
+                        <p class="mb-0">We use only the latest and most reliable security equipment from trusted manufacturers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex align-items-start mb-4">
+                    <div class="feature-icon-small bg-primary bg-gradient text-white rounded-circle me-3">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="h5 mb-2">Expert Installation</h4>
+                        <p class="mb-0">Our certified technicians ensure proper installation and optimal system performance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex align-items-start mb-4">
+                    <div class="feature-icon-small bg-primary bg-gradient text-white rounded-circle me-3">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="h5 mb-2">24/7 Support</h4>
+                        <p class="mb-0">Round-the-clock technical support and monitoring services for your peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex align-items-start mb-4">
+                    <div class="feature-icon-small bg-primary bg-gradient text-white rounded-circle me-3">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="h5 mb-2">Customized Solutions</h4>
+                        <p class="mb-0">Tailored security solutions designed to meet your specific business needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">Ready to Secure Your Business?</h2>
+                <p class="lead mb-4">Contact us today for a free security assessment and customized solution for your business.</p>
+                <a href="{% url 'mocki:contact' %}" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .feature-icon-small {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .card {
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing ul li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .pricing ul li:last-child {
+        border-bottom: none;
+    }
+</style>
+{% endblock %} 

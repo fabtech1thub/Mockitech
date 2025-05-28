@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MockiTech - IT Solutions{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'mocki:home' %}">
+                <img src="{% static 'images/MOCKITECH_large.png' %}" alt="MockiTech Logo" class="logo-img" style="height: 160px; width: auto; object-fit: contain; padding: 5px 0; margin-top: 45px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="softwareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-code me-1"></i>Software Solutions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="softwareDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mocki:pos_systems' %}"><i class="fas fa-cash-register me-2"></i>POS Systems</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:erp_solutions' %}"><i class="fas fa-users me-2"></i>ERP</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:hospital_management' %}"><i class="fas fa-hospital me-2"></i>Hospital Management</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:school_management' %}"><i class="fas fa-school me-2"></i>School Management</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:web_design' %}"><i class="fas fa-laptop-code me-2"></i>Web Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="hardwareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-desktop me-1"></i>Hardware Solutions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="hardwareDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mocki:hardware_sourcing' %}"><i class="fas fa-shopping-cart me-2"></i>Hardware Sourcing</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:hardware_installation' %}"><i class="fas fa-tools me-2"></i>Hardware Installation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="supportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-headset me-1"></i>Technical Support
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="supportDropdown">
+                            <li><a class="dropdown-item" href="{% url 'mocki:technical_support' %}"><i class="fas fa-headset me-2"></i>Technical Support</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:it_support' %}"><i class="fas fa-hands-helping me-2"></i>IT Support</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:maintenance_services' %}"><i class="fas fa-wrench me-2"></i>Maintenance Services</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:cctv_security' %}"><i class="fas fa-video me-2"></i>CCTV & Security</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:cybersecurity' %}"><i class="fas fa-shield-alt me-2"></i>Cybersecurity</a></li>
+                            <li><a class="dropdown-item" href="{% url 'mocki:data_management' %}"><i class="fas fa-database me-2"></i>Data Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2" href="{% url 'mocki:contact' %}" style="padding: 8px 20px;">
+                            <i class="fas fa-calendar-check me-1"></i>Book Demo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light text-dark py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-brand">
+                        <img src="{% static 'images/MOCKITECH_large.png' %}" alt="MockiTech Logo" class="footer-logo" style="height: 160px; width: auto; object-fit: contain;">
+                        <p class="text-muted">Empowering businesses with innovative IT solutions and cutting-edge technology services.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'mocki:home' %}">Home</a></li>
+                        <li><a href="{% url 'mocki:services' %}">Services</a></li>
+                        <li><a href="{% url 'mocki:about' %}">About</a></li>
+                        <li><a href="{% url 'mocki:blog' %}">Blog</a></li>
+                        <li><a href="{% url 'mocki:contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone me-2"></i> +(254) 718-862-447</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@mockitech.com</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Tech Street, City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; {% now "Y" %} MockiTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- CTA Slide-in Notification -->
+    <div id="ctaNotification" class="cta-notification">
+        <button type="button" class="btn-close" onclick="closeNotification()" aria-label="Close"></button>
+        <div class="cta-content">
+            <div class="cta-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="cta-text">
+                <h4>Transform Your Business!</h4>
+                <p>Get a free consultation today</p>
+                <a href="{% url 'mocki:contact' %}" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .cta-notification {
+            position: fixed;
+            right: -300px; /* Start off-screen */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 280px;
+            background: white;
+            border-radius: 10px 0 0 10px;
+            box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: right 0.5s ease-in-out;
+            padding: 15px;
+        }
+
+        .cta-notification.show {
+            right: 0;
+        }
+
+        .cta-notification .btn-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .cta-notification .btn-close:hover {
+            opacity: 1;
+        }
+
+        .cta-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .cta-icon {
+            width: 50px;
+            height: 50px;
+            background: #0d6efd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cta-icon i {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .cta-text {
+            flex-grow: 1;
+        }
+
+        .cta-text h4 {
+            font-size: 1.1rem;
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+
+        .cta-text p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0 0 10px 0;
+        }
+
+        .cta-text .btn {
+            width: 100%;
+            padding: 0.4rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .cta-notification {
+                width: 250px;
+            }
+        }
+    </style>
+
+    <script>
+        function showNotification() {
+            const notification = document.getElementById('ctaNotification');
+            notification.classList.add('show');
+        }
+
+        function closeNotification() {
+            const notification = document.getElementById('ctaNotification');
+            notification.classList.remove('show');
+            // Store in localStorage that user has seen the notification
+            localStorage.setItem('ctaNotificationShown', 'true');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if notification has been shown before
+            if (!localStorage.getItem('ctaNotificationShown')) {
+                // Show notification after 3 seconds
+                setTimeout(showNotification, 3000);
+            }
+        });
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html> 
