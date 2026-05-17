@@ -23,7 +23,12 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="{{ url_for('home') }}">
-                <img src="{{ url_for('static', filename='images/MOCKITECH_large.png') }}" alt="MockiTech" class="brand-logo">
+                <img src="{{ url_for('static', filename='images/MOCKITECH.png') }}"
+                     alt="MockiTech"
+                     class="brand-logo"
+                     width="160"
+                     height="44"
+                     decoding="async">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -101,7 +106,7 @@
         <div class="row g-4 py-5">
             <div class="col-lg-4">
                 <a href="{{ url_for('home') }}" class="d-inline-block mb-3">
-                    <img src="{{ url_for('static', filename='images/MOCKITECH_large.png') }}" alt="MockiTech" class="footer-logo">
+                    <img src="{{ url_for('static', filename='images/MOCKITECH.png') }}" alt="MockiTech" class="footer-logo" width="140" height="48" loading="lazy">
                 </a>
                 <p class="footer-tagline">Enterprise-grade IT solutions for Kenyan businesses — software, hardware, and 24/7 support.</p>
                 <div class="social-links">
