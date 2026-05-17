@@ -1,0 +1,39 @@
+# Django static and media files serving
+RewriteEngine On
+
+# Serve static files
+RewriteCond %{REQUEST_URI} ^/static/
+RewriteRule ^static/(.*)$ /staticfiles/$1 [L]
+
+# Serve media files
+RewriteCond %{REQUEST_URI} ^/media/
+RewriteRule ^media/(.*)$ /media/$1 [L]
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Prevent access to sensitive files
+<Files "*.py">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "*.pyc">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "*.sqlite3">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ".env">
+    Order allow,deny
+    Deny from all
+</Files> 

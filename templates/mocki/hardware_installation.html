@@ -1,0 +1,197 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}Hardware Installation Services - MockiTech{% endblock %}
+
+{% block meta_description %}Professional IT hardware installation services. Expert setup and configuration of your IT infrastructure by certified technicians.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+
+    <div class="background-slideshow">
+        <img src="{{ url_for('static', filename='images/Computer-Repair.webp') }}" class="active">
+        <img src="{{ url_for('static', filename='images/Hardware.jpeg') }}" class="">
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">Hardware Installation</h1>
+                    <p class="hero-subtitle">Professional installation and setup</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#services" class="btn btn-light btn-lg">Learn More</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Key Features -->
+<section class="web-features py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Key Features</h2>
+        <div class="row g-4">
+            <!-- Professional Installation -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                    <h3>Professional Installation</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Certified Technicians</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Proper Setup</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Quality Testing</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Safety Compliance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Configuration -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
+                    <h3>Configuration</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>System Setup</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Network Integration</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Performance Tuning</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Security Setup</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Documentation -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
+                    <h3>Documentation</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Installation Reports</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Configuration Guides</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>User Manuals</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Warranty Information</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Features -->
+<section class="additional-features bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Additional Features</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                    <h4>Timely Service</h4>
+                    <p>Scheduled installations</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <h4>Safety First</h4>
+                    <p>Compliance with standards</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+                    <h4>Training</h4>
+                    <p>User and staff training</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                    <h4>Support</h4>
+                    <p>Post-installation support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+        <div class="row g-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Basic</h3>
+                        <div class="price">
+                            <span class="h2">$299</span>/installation
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Hardware Setup</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Initial Configuration</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Testing</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Standard Support</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card featured">
+                    <div class="card-body">
+                        <h3 class="card-title">Professional</h3>
+                        <div class="price">
+                            <span class="h2">$599</span>/installation
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Advanced Setup</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Network Integration</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Performance Testing</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Priority Support</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Enterprise</h3>
+                        <div class="price">
+                            <span class="h2">Custom</span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Custom Solutions</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Full Infrastructure Setup</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Staff Training</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>24/7 Support</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Need Professional Installation?</h2>
+        <p class="lead mb-4">Contact us today to schedule your hardware installation</p>
+        <a href="{{ url_for('contact') }} class="btn btn-light btn-lg">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+ 

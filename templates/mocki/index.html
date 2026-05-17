@@ -1,0 +1,214 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}Leading IT Solutions & Software Development in Kenya — MockiTech{% endblock %}
+
+{% block content %}
+
+<section class="hero-section">
+    <div class="background-slideshow">
+        <img src="{{ url_for('static', filename='images/240_F_163131613_n0ZXuSkxVBsLuHl19JV9we7Eq3C4gMnK.jpg') }}" alt="" class="active">
+        <img src="{{ url_for('static', filename='images/240_F_671381883_FbdixsUWF3eECs3mavUBda23U8BtawxM.jpg') }}" alt="">
+        <img src="{{ url_for('static', filename='images/240_F_1009403450_bNsrylQdhzeqy57kLO8mOupqHvku59Os.jpg') }}" alt="">
+        <img src="{{ url_for('static', filename='images/240_F_918733505_HKWjphFD4lWCWAYZnEhd2lUvgbuZL4TZ.jpg') }}" alt="">
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="hero-content text-center">
+            <span class="hero-badge"><i class="fas fa-bolt"></i> Trusted IT partner in Kenya</span>
+            <h1 class="hero-title">Build smarter systems.<br>Scale with confidence.</h1>
+            <p class="hero-subtitle">POS, ERP, cybersecurity, and custom software — engineered for Kenyan businesses that need reliability, speed, and support around the clock.</p>
+            <div class="hero-actions">
+                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Talk to an expert</a>
+                <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg">Explore solutions</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-bar">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="stat-card reveal">
+                    <div class="stat-value">10+</div>
+                    <p class="stat-label">Years experience</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card reveal">
+                    <div class="stat-value">24/7</div>
+                    <p class="stat-label">Expert support</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card reveal">
+                    <div class="stat-value">200+</div>
+                    <p class="stat-label">Projects delivered</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card reveal">
+                    <div class="stat-value">500+</div>
+                    <p class="stat-label">Happy clients</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">What we do</span>
+            <h2 class="section-title">End-to-end IT solutions</h2>
+            <p class="section-lead">From retail POS to enterprise ERP and security — one team, one partner, built for your growth.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-cash-register"></i></div>
+                    <h3>POS Systems</h3>
+                    <p>Fast checkout, inventory sync, and sales analytics for retail and hospitality.</p>
+                    <a href="{{ url_for('pos_systems') }}" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-sitemap"></i></div>
+                    <h3>ERP Solutions</h3>
+                    <p>Unify finance, operations, and reporting with tailored enterprise workflows.</p>
+                    <a href="{{ url_for('erp_solutions') }}" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Design</h3>
+                    <p>Modern, responsive sites that convert visitors into customers.</p>
+                    <a href="{{ url_for('web_design') }}" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-hospital"></i></div>
+                    <h3>Hospital Management</h3>
+                    <p>Patient records, billing, and clinical workflows in one secure platform.</p>
+                    <a href="{{ url_for('hospital_management') }}" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Cybersecurity</h3>
+                    <p>Protect data, networks, and reputation with proactive security.</p>
+                    <a href="{{ url_for('cybersecurity') }}" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-headset"></i></div>
+                    <h3>IT Support</h3>
+                    <p>On-site and remote support to keep your business running without downtime.</p>
+                    <a href="{{ url_for('it_support') }}" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="{{ url_for('services') }}" class="btn btn-accent btn-lg">View all services</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Why MockiTech</span>
+            <h2 class="section-title">Built for businesses that move fast</h2>
+            <p class="section-lead">We combine local expertise with enterprise-grade delivery — so you get solutions that work on day one.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card reveal">
+                    <div class="icon-wrap"><i class="fas fa-rocket"></i></div>
+                    <h3>Rapid deployment</h3>
+                    <p>Structured rollouts with training so your team is productive from week one.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card reveal">
+                    <div class="icon-wrap"><i class="fas fa-lock"></i></div>
+                    <h3>Secure by design</h3>
+                    <p>Best-practice security across software, hardware, and cloud infrastructure.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card reveal">
+                    <div class="icon-wrap"><i class="fas fa-sliders"></i></div>
+                    <h3>Fully customizable</h3>
+                    <p>Solutions tailored to your industry, workflows, and compliance needs.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card reveal">
+                    <div class="icon-wrap"><i class="fas fa-clock"></i></div>
+                    <h3>Always-on support</h3>
+                    <p>24/7 technical assistance when your operations can't afford to wait.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 reveal">
+                <span class="section-eyebrow">How we work</span>
+                <h2 class="section-title text-start">From discovery to launch</h2>
+                <p class="section-lead text-start mb-4">A clear, proven process that keeps projects on time and on budget.</p>
+                <div class="process-step">
+                    <span class="process-num">1</span>
+                    <h4>Discover & plan</h4>
+                    <p>We map your goals, systems, and constraints to define the right solution.</p>
+                </div>
+                <div class="process-step">
+                    <span class="process-num">2</span>
+                    <h4>Build & integrate</h4>
+                    <p>Development, hardware, and integrations handled by one accountable team.</p>
+                </div>
+                <div class="process-step">
+                    <span class="process-num">3</span>
+                    <h4>Deploy & support</h4>
+                    <p>Go-live, training, and ongoing maintenance so you stay ahead.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 reveal">
+                <div class="cta-band text-lg-start text-center">
+                    <h2>Ready to modernize your IT?</h2>
+                    <p>Book a free consultation and get a roadmap tailored to your business.</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Book a demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="container text-center">
+        <div class="section-header reveal">
+            <span class="section-eyebrow" style="color: #38bdf8;">Technologies</span>
+            <h2 class="section-title">Modern stack, proven results</h2>
+            <p class="section-lead">We work with industry-standard tools your team can trust.</p>
+        </div>
+        <div class="reveal">
+            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-pill"><i class="fas fa-database"></i> PostgreSQL</span>
+            <span class="tech-pill"><i class="fab fa-aws"></i> Cloud</span>
+            <span class="tech-pill"><i class="fas fa-network-wired"></i> Networking</span>
+            <span class="tech-pill"><i class="fas fa-video"></i> CCTV</span>
+            <span class="tech-pill"><i class="fas fa-mobile-screen"></i> Mobile-ready</span>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

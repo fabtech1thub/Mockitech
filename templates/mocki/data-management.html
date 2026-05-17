@@ -1,0 +1,101 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}Data Management & Backup Solutions - MockiTech{% endblock %}
+
+{% block meta_description %}Comprehensive data management and backup solutions for businesses. Secure your data with our reliable backup and recovery services.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" id="solutions">
+
+    <div class="background-slideshow">
+        <img src="{{ url_for('static', filename='images/240_F_1009403450_bNsrylQdhzeqy57kLO8mOupqHvku59Os.jpg') }}" class="active">
+        <img src="{{ url_for('static', filename='images/backup.avif') }}" class="">
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">Data Management & Backup</h1>
+                    <p class="hero-subtitle">Secure and efficient data protection</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#services" class="btn btn-light btn-lg">Learn More</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+                <img src="{{ url_for('static', filename='images/service.jpg') }}" alt="Data Management" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solutions Section -->
+<section id="solutions" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Data Management Solutions</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Cloud Backup</h3>
+                        <p>Secure cloud-based backup solutions</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Automated Backups</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Data Encryption</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Quick Recovery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-sync fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Data Recovery</h3>
+                        <p>Fast and reliable data recovery services</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Point-in-time Recovery</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Disaster Recovery</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>24/7 Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-chart-pie fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Data Analytics</h3>
+                        <p>Transform your data into insights</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Business Intelligence</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Custom Reports</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Data Visualization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Secure Your Data?</h2>
+        <p class="lead mb-4">Contact us today for a free data management assessment</p>
+        <a href="{{ url_for('contact') }} class="btn btn-light btn-lg">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+ 

@@ -1,0 +1,197 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}Hospital Management Systems - MockiTech{% endblock %}
+
+{% block meta_description %}Comprehensive hospital management solutions for modern healthcare facilities. Streamline patient care, appointments, and medical records with our advanced healthcare management system.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" id="pricing">
+
+    <div class="background-slideshow">
+        <img src="{{ url_for('static', filename='images/Admin.jpg') }}" class="active">
+        <img src="{{ url_for('static', filename='images/240_F_1009403450_bNsrylQdhzeqy57kLO8mOupqHvku59Os.jpg') }}" class="">
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">Hospital Management System</h1>
+                    <p class="hero-subtitle">Transform your healthcare facility</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#services" class="btn btn-light btn-lg">Learn More</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Key Features -->
+<section class="hospital-features py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Key Features</h2>
+        <div class="row g-4">
+            <!-- Patient Management -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-user-injured fa-3x text-primary mb-3"></i>
+                    <h3>Patient Management</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Patient Registration</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Medical History</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Insurance Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Patient Portal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Appointment System -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-calendar-check fa-3x text-primary mb-3"></i>
+                    <h3>Appointment System</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Online Booking</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Doctor Scheduling</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Automated Reminders</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Waitlist Management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Electronic Health Records -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-file-medical fa-3x text-primary mb-3"></i>
+                    <h3>Electronic Health Records</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Digital Patient Records</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Lab Results Integration</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Prescription Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Secure Data Storage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Features -->
+<section class="additional-features bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Additional Features</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-pills fa-3x text-primary mb-3"></i>
+                    <h4>Pharmacy Management</h4>
+                    <p>Streamline medication dispensing and inventory</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h4>Analytics & Reporting</h4>
+                    <p>Comprehensive healthcare analytics</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-money-bill-wave fa-3x text-primary mb-3"></i>
+                    <h4>Billing & Insurance</h4>
+                    <p>Automated billing and insurance processing</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                    <h4>Security & Compliance</h4>
+                    <p>HIPAA compliant data protection</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+        <div class="row g-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Basic</h3>
+                        <div class="price">
+                            <span class="h2">Ksh 29,999</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Up to 50 Beds</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Patient Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Appointment System</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Email Support</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card featured">
+                    <div class="card-body">
+                        <h3 class="card-title">Professional</h3>
+                        <div class="price">
+                            <span class="h2">Ksh 59,999</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Up to 200 Beds</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Advanced Patient Management</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Full EHR System</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>24/7 Support</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Enterprise</h3>
+                        <div class="price">
+                            <span class="h2">$999</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Unlimited Beds</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Multi-location Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Custom Integration</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Dedicated Support</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Transform Your Healthcare Facility?</h2>
+        <p class="lead mb-4">Contact us today to discuss your hospital management needs</p>
+        <a href="{{ url_for('contact') }} class="btn btn-light btn-lg">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+ 

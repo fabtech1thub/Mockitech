@@ -1,0 +1,198 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}Contact MockiTech — IT Solutions in Kenya{% endblock %}
+
+{% block content %}
+
+<section class="hero-section">
+    <div class="background-slideshow">
+        <img src="{{ url_for('static', filename='images/Contact.webp') }}" alt="" class="active">
+        <img src="{{ url_for('static', filename='images/240_F_163789013_wP22oviyGLjHJj5iOW3beaQiRNq2l7SY.jpg') }}" alt="">
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fas fa-envelope"></i> Contact</span>
+            <h1 class="hero-title">Let's talk about your project</h1>
+            <p class="hero-subtitle">Tell us what you need — our team responds within one business day.</p>
+            <div class="hero-actions">
+                <a href="#contact-form" class="btn btn-light btn-lg">Send a message</a>
+                <a href="#contact-info" class="btn btn-outline-light btn-lg">Contact info</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact-form">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="contact-card reveal">
+                    <h2 class="h4 mb-4">Send us a message</h2>
+                    <form method="post" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Full name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="+254 ...">
+                            </div>
+                            <div class="col-12">
+                                <label for="service" class="form-label">Service interested in</label>
+                                <select class="form-select" id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="pos">POS Systems</option>
+                                    <option value="erp">ERP Solutions</option>
+                                    <option value="hospital">Hospital Management</option>
+                                    <option value="school">School Management</option>
+                                    <option value="web">Web Design</option>
+                                    <option value="hardware">Hardware Solutions</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a service.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-accent btn-lg">Send message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5" id="contact-info">
+                <div class="info-card reveal">
+                    <h3>Get in touch</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h5>Address</h5>
+                            <p>Kindaruma Road<br>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h5>Phone</h5>
+                            <p>+254 567 890 360<br>+254 718 862 447</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h5>Email</h5>
+                            <p>info@mockitech.com<br>support@mockitech.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item mb-0">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h5>Business hours</h5>
+                            <p>Mon–Fri: 9:00 AM – 6:00 PM<br>Sat: 10:00 AM – 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Location</span>
+            <h2 class="section-title">Find us in Nairobi</h2>
+        </div>
+        <div class="map-wrap reveal">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.818509999593!2d36.77819031475398!3d-1.283385835979379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b62a3c8efde4c!2sKilimani%2C+Nairobi%2C+Kenya!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske"
+                title="MockiTech office location"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">FAQ</span>
+            <h2 class="section-title">Common questions</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion reveal" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How long does implementation take?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Most projects launch within 2–4 weeks depending on scope, integrations, and training needs.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you provide training and support?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes — we include onboarding training and offer 24/7 technical support plans.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Can solutions be customized?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely. Every solution is tailored to your workflows, team size, and compliance requirements.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function () {
+    'use strict';
+    document.querySelectorAll('.needs-validation').forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        });
+    });
+})();
+</script>
+{% endblock %}

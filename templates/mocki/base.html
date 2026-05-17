@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}MockiTech delivers POS, ERP, cybersecurity, and custom software for businesses across Kenya.{% endblock %}">
+
+    <title>{% block title %}MockiTech — IT Solutions{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body class="site-body">
+
+<header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/MOCKITECH_large.png') }}" alt="MockiTech" class="brand-logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="{{ url_for('services') }}"><i class="fas fa-th-large me-2"></i>All Services</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('pos_systems') }}">POS Systems</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('erp_solutions') }}">ERP Solutions</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('hospital_management') }}">Hospital Management</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('school_management') }}">School Management</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('web_design') }}">Web Design</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('hardware_sourcing') }}">Hardware Sourcing</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('cybersecurity') }}">Cybersecurity</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('cctv_security') }}">CCTV & Security</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Support
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="{{ url_for('technical_support') }}">Technical Support</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('it_support') }}">IT Support</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('maintenance_services') }}">Maintenance</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-accent" href="{{ url_for('contact') }}">Book a Demo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="site-main">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="container pt-3">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row g-4 py-5">
+            <div class="col-lg-4">
+                <a href="{{ url_for('home') }}" class="d-inline-block mb-3">
+                    <img src="{{ url_for('static', filename='images/MOCKITECH_large.png') }}" alt="MockiTech" class="footer-logo">
+                </a>
+                <p class="footer-tagline">Enterprise-grade IT solutions for Kenyan businesses — software, hardware, and 24/7 support.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6 class="footer-heading">Company</h6>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3">
+                <h6 class="footer-heading">Solutions</h6>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="{{ url_for('pos_systems') }}">POS Systems</a></li>
+                    <li><a href="{{ url_for('erp_solutions') }}">ERP Solutions</a></li>
+                    <li><a href="{{ url_for('cybersecurity') }}">Cybersecurity</a></li>
+                    <li><a href="{{ url_for('web_design') }}">Web Design</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="footer-heading">Contact</h6>
+                <ul class="footer-contact list-unstyled">
+                    <li><i class="fas fa-envelope"></i> info@mockitech.com</li>
+                    <li><i class="fas fa-phone"></i> +254 718 862 447</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Kindaruma Road, Nairobi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ year }} MockiTech. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>

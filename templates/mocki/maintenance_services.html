@@ -1,0 +1,197 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}IT Maintenance Services - MockiTech{% endblock %}
+
+{% block meta_description %}Professional IT maintenance services to ensure your systems run at peak performance. Regular updates, monitoring, and preventive maintenance.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+
+    <div class="background-slideshow">
+        <img src="{{ url_for('static', filename='images/240_F_918733505_HKWjphFD4lWCWAYZnEhd2lUvgbuZL4TZ.jpg') }}" class="active">
+        <img src="{{ url_for('static', filename='images/Computer-Repair.webp') }}" class="">
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">Maintenance Services</h1>
+                    <p class="hero-subtitle">Proactive maintenance and monitoring</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#services" class="btn btn-light btn-lg">Learn More</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Key Features -->
+<section class="web-features py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Key Features</h2>
+        <div class="row g-4">
+            <!-- Preventive Maintenance -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                    <h3>Preventive Maintenance</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Regular Check-ups</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>System Updates</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Performance Tuning</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Health Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- System Optimization -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-tachometer-alt fa-3x text-primary mb-3"></i>
+                    <h3>System Optimization</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Performance Analysis</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Resource Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Efficiency Tuning</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Capacity Planning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Security Updates -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <h3>Security Updates</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Patch Management</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Security Audits</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Vulnerability Testing</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Compliance Checks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Features -->
+<section class="additional-features bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Additional Features</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h4>Monitoring</h4>
+                    <p>24/7 system monitoring</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
+                    <h4>Reporting</h4>
+                    <p>Detailed maintenance reports</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-history fa-3x text-primary mb-3"></i>
+                    <h4>Backup</h4>
+                    <p>Regular system backups</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-sync fa-3x text-primary mb-3"></i>
+                    <h4>Updates</h4>
+                    <p>Software and firmware updates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+        <div class="row g-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Basic</h3>
+                        <div class="price">
+                            <span class="h2">Ksh 14,999</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Monthly Check-ups</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Updates</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Email Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Reports</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card featured">
+                    <div class="card-body">
+                        <h3 class="card-title">Professional</h3>
+                        <div class="price">
+                            <span class="h2">Ksh 29,999</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Weekly Maintenance</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Priority Updates</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>24/7 Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Detailed Reports</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Enterprise</h3>
+                        <div class="price">
+                            <span class="h2">Custom</span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Custom Schedule</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Dedicated Team</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Real-time Monitoring</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Custom Reports</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Need IT Maintenance?</h2>
+        <p class="lead mb-4">Contact us today for reliable maintenance services</p>
+        <a href="{{ url_for('contact') }} class="btn btn-light btn-lg">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+ 

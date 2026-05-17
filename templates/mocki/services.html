@@ -1,0 +1,125 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}Our Services — MockiTech{% endblock %}
+
+{% block content %}
+
+<section class="hero-section">
+    <div class="background-slideshow">
+        <img src="{{ url_for('static', filename='images/240_F_163131613_n0ZXuSkxVBsLuHl19JV9we7Eq3C4gMnK.jpg') }}" alt="" class="active">
+        <img src="{{ url_for('static', filename='images/240_F_671381883_FbdixsUWF3eECs3mavUBda23U8BtawxM.jpg') }}" alt="">
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="hero-content text-center">
+            <span class="hero-badge"><i class="fas fa-layer-group"></i> Services</span>
+            <h1 class="hero-title">Comprehensive IT solutions</h1>
+            <p class="hero-subtitle">Software, hardware, and support packages tailored to how your business operates.</p>
+            <div class="hero-actions">
+                <a href="#pricing" class="btn btn-light btn-lg">View packages</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Get started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="pricing">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Pricing overview</span>
+            <h2 class="section-title">Solutions for every stage</h2>
+            <p class="section-lead">Transparent starting points — final quotes customized to your scope and timeline.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card h-100 border-0 reveal">
+                    <div class="card-body p-4">
+                        <div class="service-icon mb-3"><i class="fas fa-code"></i></div>
+                        <h3 class="h4 mb-3">Software Solutions</h3>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>POS Systems</span>
+                                <strong>{{ 150000|format_currency }}</strong>
+                            </li>
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>ERP</span>
+                                <strong>{{ 180000|format_currency }}</strong>
+                            </li>
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>Hospital Management</span>
+                                <strong>{{ 250000|format_currency }}</strong>
+                            </li>
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>School Management</span>
+                                <strong>{{ 200000|format_currency }}</strong>
+                            </li>
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>Web Design</span>
+                                <strong>{{ 120000|format_currency }}</strong>
+                            </li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-accent w-100">Get started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100 border-0 reveal">
+                    <div class="card-body p-4">
+                        <div class="service-icon mb-3"><i class="fas fa-desktop"></i></div>
+                        <h3 class="h4 mb-3">Hardware Solutions</h3>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>Hardware Sourcing</span>
+                                <strong>{{ 50000|format_currency }}</strong>
+                            </li>
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>Installation</span>
+                                <strong>{{ 30000|format_currency }}</strong>
+                            </li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-accent w-100">Get started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100 border-0 reveal">
+                    <div class="card-body p-4">
+                        <div class="service-icon mb-3"><i class="fas fa-headset"></i></div>
+                        <h3 class="h4 mb-3">Technical Support</h3>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>Technical Support</span>
+                                <strong>{{ 25000|format_currency }}/mo</strong>
+                            </li>
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>IT Support</span>
+                                <strong>{{ 35000|format_currency }}/mo</strong>
+                            </li>
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>Maintenance</span>
+                                <strong>{{ 20000|format_currency }}/mo</strong>
+                            </li>
+                            <li class="mb-2 d-flex justify-content-between gap-2">
+                                <span><i class="fas fa-check text-success me-2"></i>CCTV & Security</span>
+                                <strong>{{ 45000|format_currency }}/mo</strong>
+                            </li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-accent w-100">Get started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div class="cta-band reveal">
+            <h2>Need a custom solution?</h2>
+            <p>We'll design a package around your workflows, team size, and budget.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Request a custom quote</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}500 — Server Error | MockiTech{% endblock %}
+
+{% block content %}
+<section class="error-page">
+    <div class="container">
+        <p class="section-eyebrow">Error 500</p>
+        <p class="error-code">500</p>
+        <h1 class="section-title">Something went wrong</h1>
+        <p class="section-lead mb-4">We're working on it. Please try again in a few minutes.</p>
+        <a href="{{ url_for('home') }}" class="btn btn-accent btn-lg">Back to home</a>
+    </div>
+</section>
+{% endblock %}

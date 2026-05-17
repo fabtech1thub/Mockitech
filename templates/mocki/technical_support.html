@@ -1,0 +1,198 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}Technical Support Services - MockiTech{% endblock %}
+
+{% block meta_description %}24/7 technical support services for all your IT needs. Expert assistance, quick response times, and comprehensive problem resolution.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+
+    <div class="background-slideshow">
+        <img src="{{ url_for('static', filename='images/240_F_1009403450_bNsrylQdhzeqy57kLO8mOupqHvku59Os.jpg') }}" class="active">
+        <img src="{{ url_for('static', filename='images/240_F_163131613_n0ZXuSkxVBsLuHl19JV9we7Eq3C4gMnK.jpg') }}" class="">
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">Technical Support</h1>
+                    <p class="hero-subtitle">Round-the-clock support for your systems</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#services" class="btn btn-light btn-lg">Learn More</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Key Features -->
+<section class="web-features py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Key Features</h2>
+        <div class="row g-4">
+            <!-- 24/7 Support -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                    <h3>24/7 Support</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Round-the-clock assistance</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Quick response times</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Emergency support</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Multiple channels</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Expert Team -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <h3>Expert Team</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Certified technicians</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Specialized knowledge</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Continuous training</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Problem-solving skills</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Remote Support -->
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-laptop fa-3x text-primary mb-3"></i>
+                    <h3>Remote Support</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>Quick resolution</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Secure connection</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Screen sharing</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Real-time assistance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Features -->
+<section class="additional-features bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Additional Features</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-ticket-alt fa-3x text-primary mb-3"></i>
+                    <h4>Ticket System</h4>
+                    <p>Track support requests</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h4>Performance</h4>
+                    <p>Regular monitoring</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-book fa-3x text-primary mb-3"></i>
+                    <h4>Knowledge Base</h4>
+                    <p>Self-help resources</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-item text-center">
+                    <i class="fas fa-history fa-3x text-primary mb-3"></i>
+                    <h4>History</h4>
+                    <p>Issue tracking</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+        <div class="row g-4">
+            <!-- Basic Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Basic</h3>
+                        <div class="price">
+                            <span class="h2">Ksh 29,999</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Business Hours Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Phone & Email Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Basic Troubleshooting</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Response within 1 hour</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card featured">
+                    <div class="card-body">
+                        <h3 class="card-title">Professional</h3>
+                        <div class="price">
+                            <span class="h2">Ksh 49,999</span>/month
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>24/7 Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Phone & Email Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Remote Assistance</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Response within 30 minutes</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>On-site Support twice a week</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Enterprise</h3>
+                        <div class="price">
+                            <span class="h2">Custom</span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Dedicated Support Team</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>On-site Support</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Priority Response</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Custom SLA</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }} class="btn btn-primary w-100">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Need Technical Support?</h2>
+        <p class="lead mb-4">Contact us today for reliable technical assistance</p>
+        <a href="{{ url_for('contact') }} class="btn btn-light btn-lg">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+ 

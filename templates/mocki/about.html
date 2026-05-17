@@ -1,0 +1,141 @@
+{% extends 'mocki/base.html' %}
+
+{% block title %}About MockiTech — Your Trusted IT Partner in Kenya{% endblock %}
+
+{% block content %}
+
+<section class="hero-section">
+    <div class="background-slideshow">
+        <img src="{{ url_for('static', filename='images/Admin.jpg') }}" alt="" class="active">
+        <img src="{{ url_for('static', filename='images/240_F_163131613_n0ZXuSkxVBsLuHl19JV9we7Eq3C4gMnK.jpg') }}" alt="">
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fas fa-building"></i> About us</span>
+            <h1 class="hero-title">Technology partners for Kenyan growth</h1>
+            <p class="hero-subtitle">We help organizations modernize operations with software, hardware, and support that scales.</p>
+            <div class="hero-actions">
+                <a href="#story" class="btn btn-light btn-lg">Our story</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Get in touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="story">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center reveal">
+                <span class="section-eyebrow">Our story</span>
+                <h2 class="section-title">Growing with Kenyan businesses</h2>
+                <p class="section-lead">Founded with a vision to transform businesses through technology, MockiTech has become a trusted IT partner for organizations across Kenya.</p>
+                <p class="text-muted mt-3">We combine technical expertise with industry best practices to deliver solutions that exceed expectations. Our commitment to quality, innovation, and customer satisfaction makes us the preferred choice for reliable IT systems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Our foundation</span>
+            <h2 class="section-title">Mission, vision & values</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card reveal">
+                    <div class="icon-wrap"><i class="fas fa-bullseye"></i></div>
+                    <h3>Our mission</h3>
+                    <p>Empower Kenyan businesses with innovative technology that drives growth in the local market.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card reveal">
+                    <div class="icon-wrap"><i class="fas fa-eye"></i></div>
+                    <h3>Our vision</h3>
+                    <p>Be the leading provider of cutting-edge IT solutions transforming businesses across Kenya.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card reveal">
+                    <div class="icon-wrap"><i class="fas fa-heart"></i></div>
+                    <h3>Our values</h3>
+                    <p>Innovation, quality, integrity, and customer satisfaction in everything we deliver.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Leadership</span>
+            <h2 class="section-title">Meet the team</h2>
+            <p class="section-lead">Experienced professionals dedicated to your success.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card team-card reveal">
+                    <img src="{{ url_for('static', filename='images/team1.jpg') }}" class="card-img-top" alt="Micheni Mich">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-1">Micheni Mich</h4>
+                        <p class="text-muted mb-0">CEO & Founder</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card team-card reveal">
+                    <img src="{{ url_for('static', filename='images/team1.jpg') }}" class="card-img-top" alt="Kivungi Muthanga">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-1">Kivungi Muthanga</h4>
+                        <p class="text-muted mb-0">CTO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card team-card reveal">
+                    <img src="{{ url_for('static', filename='images/team1.jpg') }}" class="card-img-top" alt="Erick Munene">
+                    <div class="card-body text-center">
+                        <h4 class="card-title mb-1">Erick Munene</h4>
+                        <p class="text-muted mb-0">Head of Development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section stats-section">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">500+</div>
+                    <p class="stat-label">Happy clients</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">1000+</div>
+                    <p class="stat-label">Projects completed</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">50+</div>
+                    <p class="stat-label">Team members</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">10+</div>
+                    <p class="stat-label">Years experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
